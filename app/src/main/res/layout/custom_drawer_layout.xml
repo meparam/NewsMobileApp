@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="260dp"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:id="@+id/left_drawer"
+    android:layout_gravity="start">
+
+    <include layout="@layout/nav_header_all"/>
+    
+    <RelativeLayout
+        android:id="@+id/homeCont"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_home"
+            android:layout_centerVertical="true"
+            android:tint="#366c00"/>
+        <TextView
+            android:id="@+id/menu_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Home"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/homeIcon"
+            android:layout_alignBottom="@+id/homeIcon"
+            android:layout_alignTop="@+id/homeIcon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scheduleCont"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/scheduleIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_schedule"
+            android:tint="#366c00"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/schedule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Program Schedule"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/scheduleIcon"
+            android:layout_alignBottom="@+id/scheduleIcon"
+            android:layout_alignTop="@+id/scheduleIcon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bookmarksCont"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/bookmarkIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_bookmark"
+            android:tint="#366c00"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/bookmarks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Bookmarks"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/bookmarkIcon"
+            android:layout_alignBottom="@+id/bookmarkIcon"
+            android:layout_alignTop="@+id/bookmarkIcon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contactCont"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/contactIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_contact"
+            android:tint="#366c00"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Contact Us"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/contactIcon"
+            android:layout_alignBottom="@+id/contactIcon"
+            android:layout_alignTop="@+id/contactIcon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tipsCont"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/tipIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_settings"
+            android:tint="#366c00"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Settings"
+            android:layout_marginLeft="15dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/tipIcon"
+            android:layout_alignBottom="@+id/tipIcon"
+            android:layout_alignTop="@+id/tipIcon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rateCont"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/rateIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_rate"
+            android:tint="#366c00"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/rate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Rate This App!"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/rateIcon"
+            android:layout_alignBottom="@+id/rateIcon"
+            android:layout_alignTop="@+id/rateIcon" />
+    </RelativeLayout>
+
+
+</LinearLayout>

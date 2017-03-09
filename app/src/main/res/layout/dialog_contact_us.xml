@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dialog.ContactUs"
+    android:background="#fff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Us A Ticket"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
+        android:padding="20dp"
+        android:gravity="center"/>
+<LinearLayout
+    android:id="@+id/msgCont"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Name: "
+            android:inputType="text"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Email: "
+            android:inputType="textEmailAddress"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            android:hint="Mesage: "
+            android:minLines="4"
+            android:inputType="text"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Cancel"
+            android:background="#b32424"
+            android:textColor="#fff"/>
+        <Button
+            android:id="@+id/send"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Send"
+            android:background="#1d8012"
+            android:textColor="#fff"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>
+    <TextView
+        android:id="@+id/msgSentText"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="Thanks for your message, we'll get back to you soon"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

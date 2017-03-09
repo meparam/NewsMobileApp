@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TVC News</string>
+
+    <string name="text_content"><body><h1>Heading Text</h1>
+    <p>
+        This is just to show how we can format <strong>HTML</strong> text in android
+    </p>
+    <img src="test.jpg"/>
+    <blockquote>Example from <a href="www.facebook.com/ifwaxtel">iFwAxTeL</a></blockquote>
+    </body></string>
+</resources>

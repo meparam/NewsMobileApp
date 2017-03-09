@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.CourseListActivity"
+        android:background="@color/colorPrimaryDark">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:fitsSystemWindows="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/statusBar"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/colorPrimaryDark"
+                android:visibility="gone"/>
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/actionBarSize"
+                    android:background="?attr/colorAccent"
+                    app:elevation="0dp"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/activityTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="27dp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="TVC NEWS AFRICA"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/home"
+                            app:font="@{`roboto-bold`}"/>
+
+                        <ImageView
+                            android:id="@+id/home"
+                            android:layout_width="37dp"
+                            android:layout_height="37dp"
+                            android:src="@drawable/ic_menu"
+                            android:tint="@color/colorPrimary"
+                            android:padding="1dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/outline_background"
+                            android:padding="1dp"
+                            android:layout_margin="2dp">
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/sorterSpinner"
+                                android:entries="@array/news_sort"/>
+                        </FrameLayout>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabMode="fixed"
+                    app:tabGravity="fill" />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+                </android.support.v4.view.ViewPager>
+
+            </LinearLayout>
+            <com.tvcnews.app.widget.boommenu.BoomMenuButton
+                android:id="@+id/boom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                app:boom_button_color="#388E3C"
+                app:boom_button_pressed_color="#fdd836"
+                app:layout_insetEdge="none"
+                android:layout_margin="19dp"
+                android:padding="7dp"/>
+        </android.support.design.widget.CoordinatorLayout>
+
+        <include layout="@layout/custom_drawer_layout" android:id="@+id/left" />
+
+    </android.support.v4.widget.DrawerLayout>
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="news_sort">
+        <item>Breaking News</item>
+        <item>Africa</item>
+        <item>World</item>
+        <item>Europe</item>
+        <item>Politics</item>
+        <item>Business</item>
+        <item>Entertainment</item>
+        <item>Sports</item>
+    </array>
+
+    <array name="days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </array>
+</resources>
