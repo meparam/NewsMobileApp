@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.tvcnews.app.activity.ViewNewsActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <RelativeLayout
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/colorPrimaryDark"
+        android:visibility="gone"/>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height = "wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id = "@+id/collapsing_toolbar"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:minHeight="250dp"
+            android:fitsSystemWindows = "true"
+            app:title="Sample lorem ipsum tip :)"
+            app:expandedTitleTextAppearance="?android:textAppearanceLarge"
+            app:collapsedTitleTextAppearance="?android:textAppearanceSmall"
+            app:collapsedTitleGravity="center"
+            app:expandedTitleGravity="left|bottom"
+            app:contentScrim = "@color/colorPrimary"
+            app:layout_scrollFlags = "scroll|exitUntilCollapsed|snap" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_collapseMode = "none"
+                android:background="@color/colorPrimaryDark">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/pattern"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/imageView2" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo"
+                    android:scaleType="center" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/transback"
+                    android:scaleType="centerCrop"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id = "@+id/toolbar"
+                android:layout_width = "match_parent"
+                android:layout_height = "50dp"
+                android:background = "@android:color/transparent"
+                app:contentInsetLeft = "0dp"
+                app:contentInsetStart = "0dp"
+                app:layout_collapseMode = "pin"
+                android:layout_marginRight="40dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="6dp">
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_back"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="#743f9365"
+                        android:padding="5dp"/>
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.v7.widget.Toolbar
+                android:id = "@+id/toolbar2"
+                android:layout_width = "wrap_content"
+                android:layout_height = "50dp"
+                android:background = "@android:color/transparent"
+                app:layout_collapseMode = "pin"
+                android:layout_marginLeft="60dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="6dp">
+                    <ImageView
+                        android:id="@+id/save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_save_file"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="#743f9365"
+                        android:padding="5dp"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_tip_view" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_save_file"
+        app:layout_anchor="@+id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:backgroundTint="#558b2f"/>
+
+</android.support.design.widget.CoordinatorLayout>
+
