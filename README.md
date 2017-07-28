@@ -4,15 +4,15 @@ You can use the codes as you like
 
 ![Alt text](/TVCScreen.JPG?raw=true "Screen One")
 
-![Alt text](/relative/path/to/TVCScreen2.JPG?raw=true "Screen One")
+![Alt text](/TVCScreen2.JPG?raw=true "Screen One")
 
-![Alt text](/relative/path/to/TVCScreen3.JPG?raw=true "Screen One")
+![Alt text](/TVCScreen3.JPG?raw=true "Screen One")
 
-![Alt text](/relative/path/to/TVCScreen4.JPG?raw=true "Screen One")
+![Alt text](/TVCScreen4.JPG?raw=true "Screen One")
 
-![Alt text](/relative/path/to/TVCScreen5.JPG?raw=true "Screen One")
+![Alt text](/TVCScreen5.JPG?raw=true "Screen One")
 
-![Alt text](/relative/path/to/TVCScreen6.JPG?raw=true "Screen One")
+![Alt text](/TVCScreen6.JPG?raw=true "Screen One")
 
 
 
