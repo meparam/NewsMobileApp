@@ -1,5 +1,7 @@
 package com.tvcnews.app.activity;
 
+import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -26,20 +28,28 @@ public class ViewNewsActivity extends AppCompatActivity implements AppBarLayout.
     CollapsingToolbarLayout collapsingToolbarLayout;
     FloatingActionButton fab;
     AppBarLayout appBarLayout;
-    ImageView back, save;
-    TextView tipView;
+    ImageView back, save, imageView4, award_1,award_2;
+    TextView title,newsBody;
+    int id;
 
     RelativeLayout statusBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_news);
+        DataBindingUtil.setContentView(this,R.layout.activity_view_news);
+
+        Intent intent = getIntent();
+        id = intent.getIntExtra("position",0);
 
         appBarLayout = (AppBarLayout)findViewById(R.id.app_bar);
         fab = (FloatingActionButton)findViewById(R.id.fab);
         back = (ImageView)findViewById(R.id.back);
         save = (ImageView)findViewById(R.id.save);
-        tipView = (TextView)findViewById(R.id.tip_content);
+        award_1 = (ImageView)findViewById(R.id.award_1);
+        award_2 = (ImageView)findViewById(R.id.award_2);
+        imageView4 = (ImageView)findViewById(R.id.imageView4);
+        title = (TextView)findViewById(R.id.title);
+        newsBody = (TextView)findViewById(R.id.newsBody);
         statusBar = (RelativeLayout)findViewById(R.id.statusBar);
 
         collapsingToolbarLayout = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar);
@@ -51,17 +61,28 @@ public class ViewNewsActivity extends AppCompatActivity implements AppBarLayout.
         save.setOnClickListener(clickManager);
         fab.setOnClickListener(clickManager);
 
-        String some = "<body><h1>Heading Text</h1> <p>" +
-                "This is just to show how we can use <strong>HTML</strong> formatted text in this view </p> " +
-                "<img src=\"test.jpg\"/> " +
-                "<blockquote>Example from <a href=\"www.facebook.com/team3\">Team 3</a></blockquote>" +
-                "<img src=\"test.jpg\"/> " +
-                "<blockquote>Example from <a href=\"www.facebook.com/team3\">Team 3</a></blockquote> " +
-                "<p>This way we don't need to worry about organising images from the tips in our view" +
-                " we can just organise the entire tip with html and pass it to the app and the app" +
-                "will format it properly</p</body>";
-
-        tipView.setText((Html.fromHtml(some,new ImageGetter(),null)));
+        title.setText(getResources().getStringArray(R.array.news_title)[id]);
+        newsBody.setText(getResources().getStringArray(R.array.news_body)[id]);
+        if (id==0){
+            imageView4.setImageDrawable(getResources().getDrawable(R.drawable.article_6));
+                award_1.setVisibility(View.VISIBLE);
+                award_2.setVisibility(View.VISIBLE);
+        }
+        if (id==1){
+            imageView4.setImageDrawable(getResources().getDrawable(R.drawable.article_1));
+        }
+        if (id==2){
+            imageView4.setImageDrawable(getResources().getDrawable(R.drawable.article_2));
+        }
+        if (id==3){
+            imageView4.setImageDrawable(getResources().getDrawable(R.drawable.article_3));
+        }
+        if (id==4){
+            imageView4.setImageDrawable(getResources().getDrawable(R.drawable.article_4));
+        }
+        if (id==5){
+            imageView4.setImageDrawable(getResources().getDrawable(R.drawable.article_5));
+        }
 
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT){
             statusBar.setVisibility(View.VISIBLE);
@@ -69,79 +90,6 @@ public class ViewNewsActivity extends AppCompatActivity implements AppBarLayout.
 
     }
 
-    //We can use this class to append images to strings
-    //this way we can use a single textview to parse the tip and all its images
-    //this way we can use a single textview to parse the tip and all its images
-    private void setContent(){
-        Drawable[] drawables = new Drawable[2];
-        drawables[0] = getResources().getDrawable(R.drawable.testimg);
-        drawables[1] = getResources().getDrawable(R.drawable.testimg);
-
-        SpannableStringBuilder ssb = new SpannableStringBuilder(getResources().getString(R.string.text_content));
-
-        int len = ssb.length();
-
-        for (int i = 0; i < ssb.length(); i++){
-            if (Character.toString(ssb.charAt(i)).equals("=")){
-                Drawable drawable = drawables[1];
-                drawable.setBounds(0,0,400,400);
-                //String newStr = drawable.toString()+"\n";
-
-                //ssb.append(newStr);
-
-                ImageSpan im = new ImageSpan(drawable,ImageSpan.ALIGN_BASELINE);
-                ssb.setSpan(
-                        im,
-                        i,
-                        i+len,
-                        Spannable.SPAN_INCLUSIVE_EXCLUSIVE
-                );
-            }
-            len += len -1;
-        }
-        tipView.setTransformationMethod(null);
-        tipView.setText(ssb);
-
-    }
-
-    //this will handle saving the tip on the users device
-    private void saveToDevice(){
-        long id;
-        String title;
-        String coverPhoto;
-        Spannable content;
-
-        /*Realm mRealm = Realm.getDefaultInstance();
-        mRealm.beginTransaction();
-        TipsObjectClient tipClient = mRealm.createObject(TipsObjectClient.class);
-        tipClient.setId();
-        tipClient.setTitle(title);
-        tipClient.setCoverphoto(coverPhoto);
-        tipClient.setContent(content);
-        mRealm.commitTransaction();*/
-
-
-    }
-
-    private class ImageGetter implements Html.ImageGetter{
-
-
-        @Override
-        public Drawable getDrawable(String source) {
-            int id;
-            if (source.equals("test.jpg")){
-                id = R.drawable.testimg;
-            }
-            else{
-                return null;
-            }
-
-            Drawable d = getResources().getDrawable(id);
-            d.setBounds(0,0,400,400);
-
-            return d;
-        }
-    }
 
     private View.OnClickListener clickManager = new View.OnClickListener() {
         @Override
@@ -154,7 +102,7 @@ public class ViewNewsActivity extends AppCompatActivity implements AppBarLayout.
                     Toast.makeText(getApplicationContext(), "Save Clicked", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.fab:
-
+                    Toast.makeText(getApplicationContext(), "Save Clicked", Toast.LENGTH_SHORT).show();
                     break;
             }
         }
@@ -165,6 +113,10 @@ public class ViewNewsActivity extends AppCompatActivity implements AppBarLayout.
         if (Math.abs(verticalOffset)==appBarLayout.getTotalScrollRange()){
             //closed
             save.setVisibility(View.VISIBLE);
+        }
+        else if (Math.abs(verticalOffset)<appBarLayout.getTotalScrollRange()){
+            //closed
+            save.setVisibility(View.GONE);
         }
         else if (verticalOffset == 0){
             //open

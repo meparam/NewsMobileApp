@@ -54,7 +54,10 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsHo
         if (obj.isChecked()){
             holder.newsBookmark.setChecked(true);
         }
-        //holder.dayText.setText(obj.getWeekDay());
+        holder.newsTitle.setText(obj.getTitle());
+        holder.newsImage.setImageDrawable(obj.getImage());
+        holder.newsContentMini.setText(obj.getBody());
+
     }
 
     @Override

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tvcnews.app.activity.ViewNewsActivity"
+    tools:showIn="@layout/activity_view_news"
+    android:scrollbars="none"
+    app:behavior_overlapTop="130dp"
+    android:background="#fff"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:src="@drawable/testimg"
+                android:scaleType="centerCrop"
+                android:id="@+id/imageView4" />
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10 minutes ago"
+                android:textSize="12sp"
+                android:drawableLeft="@drawable/ic_time"
+                android:layout_below="@+id/imageView4"
+                android:layout_marginTop="-25dp"
+                android:background="#5a000000"
+                android:textColor="#fff"
+                android:padding="5dp"
+                android:drawablePadding="5dp"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share"
+                app:backgroundTint="#22000000"
+                android:tint="#fff"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                app:elevation="0dp"
+                app:fabSize="mini"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_comment"
+                android:layout_above="@+id/timeText"
+                app:backgroundTint="#ff0303"
+                android:tint="#fff"
+                android:layout_toLeftOf="@+id/fab"
+                android:layout_marginTop="-19dp"
+                android:layout_marginRight="-4dp"
+                app:elevation="5dp"
+                app:fabSize="mini"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_like"
+                android:layout_above="@+id/timeText"
+                app:backgroundTint="#ff0303"
+                android:tint="#fff"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-29dp"
+                android:layout_marginRight="20dp"
+                app:fabSize="normal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/imageView4"
+                android:padding="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:id="@+id/title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:id="@+id/newsBody" />
+                
+                <ImageView
+                    android:id="@+id/award_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/award_1"
+                    android:scaleType="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"/>
+                <ImageView
+                    android:id="@+id/award_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/award_2"
+                    android:scaleType="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/othersTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="More News"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:paddingLeft="20dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_below="@+id/content"
+            android:layout_marginTop="50dp"
+            android:background="#fab700"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/othersTitle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:background="#f1f1f1">
+
+                    <ImageView
+                        android:id="@+id/other_image2"
+                        android:layout_width="250dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/testimg"
+                        android:scaleType="centerCrop"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nigeria gets world bank loan"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:layout_below="@+id/other_image2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 AM"
+                        android:layout_below="@+id/other_image2"
+                        android:layout_alignParentRight="true"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:background="#f1f1f1"
+                    android:layout_marginLeft="10dp">
+                    <ImageView
+                        android:id="@+id/other_image"
+                        android:layout_width="250dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/testimg"
+                        android:scaleType="centerCrop"/>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nigeria gets world bank loan"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:layout_below="@id/other_image"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 AM"
+                        android:layout_below="@+id/other_image"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:background="#f1f1f1"
+                    android:layout_marginLeft="10dp">
+                    <ImageView
+                        android:id="@+id/other_image3"
+                        android:layout_width="250dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/testimg"
+                        android:scaleType="centerCrop"/>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nigeria gets world bank loan"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:layout_below="@id/other_image3"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 AM"
+                        android:layout_below="@+id/other_image3"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+        
+    </RelativeLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>

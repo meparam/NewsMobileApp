@@ -8,4 +8,105 @@
     <img src="test.jpg"/>
     <blockquote>Example from <a href="www.facebook.com/ifwaxtel">iFwAxTeL</a></blockquote>
     </body></string>
+
+
+    <string name="news_content_1">This is a test content that states that Buhari just came back to Nigeria looking all good
+    and chatty as Former acting president Professor Yemi Osinbajo stated earlier while he was in London
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</string>
+
+    <string-array name="news_title">
+        <item>TVC wins big at Nigeria’s 2017 City People Awards</item>
+        <item>China to shut down all ivory factories, retail stores in 2017</item>
+        <item>Egypt court overturns block on islands transfer to Saudi Arabia</item>
+        <item>Ethiopian Athletes sweep medals at Rome Marathon</item>
+        <item>Nigeria: Ikate residents celebrate Elegba community festival in Lagos</item>
+        <item>Zimbabwe revenue authority goes after tax evaders</item>
+
+    </string-array>
+
+    <string-array name="news_body">
+        <item>It was double celebration for Television Continental as it won two awards at this year’s City People Awards for excellence.Bukola Samuel Wemimo won the best presenter of the year for her outstanding performance on TVC News programme, Fireworks.
+
+Bukola who was full of praise dedicated the laurel to her mother, who is also a seasoned broadcaster.
+
+TVC was announced the Best Television station of the Year by the organisers for keeping viewers entertained and informed all year long.</item>
+        <item>China has shut down 67, or one third its ivory factories and retail stores, and will shut down the remaining 105 by the end of the year, according to the State Forestry Administration on Friday.\n
+
+To further the protection of wild elephants, the administration said that the unsold and unprocessed ivory items can be transported to the remaining 105 factories and stores, but December 31 will be the last day of operations for the sale of ivory.
+
+“The rest of the raw materials will be used in non-commercial activities, for example, restorations of antiques in museums,” said Zhang Dehui, Chief of Wildlife Conservation Division under the State Forestry Administration.
+
+China’s ivory ban has led to a sagging illegal ivory market in recent years.
+
+“China has been spearheading the effort to close its ivory market. This will help reduce the pursuit for profit in ivory and quash its consumption demand. Meanwhile, it will encourage other developing and developed countries to further clamp down on their relevant domestic ivory markets in a bid to save the wild elephant population,” said Wang Aimin, Country Program Director of the Wildlife Conservation Society China Program.
+
+China used to account for about 70 percent of the global ivory market, but it wants to honor its commitment to the protection of elephants.
+
+“There are many other countries that still allow ivory processing and sales for commercial purposes. And commercial hunting of African elephants is not prohibited in some countries. We hope that these countries will evaluate their current policies on elephant protection and take further action,” said Zhang.
+
+The State Forestry Administration said China has provided 10 million dollars to African countries for the protection of elephants and other wildlife. And more training programs will be launched by China for African countries in law enforcement to protect the threatened species this year.</item>
+        <item>An Egyptian court ruled on Sunday that a judicial decision to block the transfer of two Red Sea islands to Saudi Arabia is void, judicial sources said, potentially reviving a deal that triggered protests in Egypt.
+
+A court in January rejected a government plan to transfer the two uninhabited islands to Saudi Arabia after a maritime demarcation accord was announced in April. The accord awarded sovereignty of the islands to Saudi Arabia, even though most Egyptians believe they belong to Egypt.
+
+The decision by Egypt’s Court of Urgent Matters is subject to appeal and any final deal must be approved by parliament.
+
+The latest twist in this issue came as bilateral relations appear to be warming after months of tension.
+
+Egyptian President Abdel Fattah al-Sisi accepted an invitation last week from Saudi Arabia’s King Salman to visit his country in April, a move that came on the heels of the kingdom’s decision to restore oil aid shipments to Egypt after a halt of about six months.
+
+The ongoing island litigation had previously been a source of unease between Egypt and Saudi Arabia, which has showered Cairo with tens of billions of dollars in aid in recent years.
+
+Human rights lawyer Khaled Ali, whose case in an administrative court had nullified the agreement, said the ruling was beyond the jurisdiction of the Court of Urgent Matters. He described it as a way for parliament to take judicial cover while debating an accord already rejected by other courts.
+
+“The high administrative court rulings are final, and their implementation may not be stopped or nullified except by another ruling of the high administrative court,” he wrote in a post on his Facebook page.
+
+Saudi and Egyptian officials had argued that the islands belonged to Saudi Arabia and were only under Egyptian control because Riyadh asked Cairo in 1950 to protect them.
+
+But lawyers who had opposed the accord said Egypt’s sovereignty over the islands dated back to a treaty in 1906, before Saudi Arabia was founded.</item>
+        <item>Ethiopian runners dominated a rain-drenched Rome Marathon as they won both the men and women’s event in the Italian capital on Sunday.
+
+Ethiopian Shura Kitala Tola won the men’s race ahead of Kenyan duo Ruto Dominic and Benjamin Bitok.
+
+The women’s podium was a clean sweep for Ethiopia. Rahma Chota Tusa won the race for a second year in a row, ahead of Mestawot Tadesse Shankutie and Abeba Tekulu Gebremeskel.</item>
+        <item>Nigerians have been urged to embrace the value and culture that binds them as a people.
+
+The admonition was made in Lagos during the annual Elegba Festival of the Ikate Elegushi community.
+
+The Oba of Ikate Elegushi, His Royal Majesty, Oba Saheed Ademola Elegushi said the fortune, peace and development being enjoyed by the people of the community is as a result of the love for their culture and tradition through the Elegba festival commemoration.</item>
+        <item>Zimbabwe’s tax authority is now giving escorts to fuel tankers to stop unscrupulous firms offloading petrol without paying duty for it.
+
+Local report says tankers arriving in the eastern border city of Mutare are now being escorted all the way to the Zambian or Botswana borders if they fail to pay duty to bring in their fuel for sale in Zimbabwe.
+
+This follows the discovery that some drivers were allegedly offloading fuel in Zimbabwe secretly and refilling their tanks with water to exit the country.
+
+Zimbabwe’s revenue authority is finding new ways to raise taxes.</item>
+
+    </string-array>
+
+    <string-array name="programs">
+        <item>A WOMAN’S WORLD</item>
+        <item>BOOMBOX</item>
+        <item>E-SPLASH</item>
+        <item>EVENTS DIARY</item>
+        <item>L.A.B.I SHOW</item>
+        <item>HEALTH MATTERS</item>
+
+    </string-array>
+    <string-array name="anchors">
+        <item>Chris Ero</item>
+        <item>BOOMBOX</item>
+        <item>Honey Pot &amp; Ajay</item>
+        <item>Lola</item>
+        <item>Labi Olayori </item>
+        <item>HEALTH MATTERS</item>
+
+    </string-array>
+
 </resources>

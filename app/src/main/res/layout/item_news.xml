@@ -25,7 +25,8 @@
             android:layout_height="85dp"
             android:src="@drawable/logo"
             android:background="#f9d123"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop"/>
         <TextView
             android:id="@+id/newsTitle"
             android:layout_width="match_parent"

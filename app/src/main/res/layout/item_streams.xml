@@ -45,7 +45,7 @@
             android:id="@+id/newsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Buhari to return to Nigeria tomorrow"
+            android:text="This is just a sample content to show what the instagram feed will look like @iFwAxTeL #awesome #TVCNEWS TVC"
             android:textSize="15sp"
             android:gravity="center"
             android:maxLines="2"

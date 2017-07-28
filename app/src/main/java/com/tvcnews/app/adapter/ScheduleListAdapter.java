@@ -46,7 +46,9 @@ public class ScheduleListAdapter extends RecyclerView.Adapter<ScheduleListAdapte
     public void onBindViewHolder(ProgrammeHolder holder, final int position) {
         ScheduleObject obj = items.get(position);
 
-        //holder.dayText.setText(obj.getWeekDay());
+        holder.programmeTitle.setText(obj.getTitle());
+        holder.programmeAnchor.setText(obj.getAnchor());
+        holder.newsImage.setImageDrawable(obj.getImage());
     }
 
     @Override

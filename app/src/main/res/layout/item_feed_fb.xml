@@ -53,7 +53,7 @@
             android:id="@+id/newsContentMini"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Buhari is set to return to the country after being away for close to a month"
+            android:text="This is just a sample content to show what the instagram feed will look like @iFwAxTeL #awesome #TVCNEWS TVC"
             android:textSize="13sp"
             android:textColor="#666"
             android:lines="2"

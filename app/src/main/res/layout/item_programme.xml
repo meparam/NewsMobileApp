@@ -12,8 +12,9 @@
     android:layout_height="wrap_content"
     app:cardBackgroundColor="#fff"
     app:cardCornerRadius="10dp"
-    app:cardElevation="1dp"
-    app:contentPadding="3dp">
+    app:cardElevation="2dp"
+    app:contentPadding="3dp"
+    android:layout_margin="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,8 +22,8 @@
 
         <ImageView
             android:id="@+id/newsImage"
-            android:layout_width="85dp"
-            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:src="@drawable/logo"
             android:background="#f9d123"
             android:layout_marginRight="10dp"/>
@@ -30,37 +31,39 @@
             android:id="@+id/programmeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/newsImage"
+            android:layout_below="@+id/newsImage"
             android:text="Your Views"
             android:textSize="17sp"
             android:maxLines="2"
             android:ellipsize="end"
             android:textColor="#000"
             android:textStyle="bold"
-            app:font="@{`roboto-bold`}"/>
+            app:font="@{`roboto-bold`}"
+            android:padding="10dp"/>
         <TextView
             android:id="@+id/programmeTime"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/newsImage"
             android:layout_below="@+id/programmeTitle"
+            android:layout_alignParentRight="true"
             android:text="7:00AM - 8:00AM"
             android:textSize="14sp"
             android:maxLines="2"
             android:ellipsize="end"
             android:textColor="#00695c"
-            android:layout_marginTop="10dp"/>
+            android:paddingRight="10dp"/>
         <TextView
             android:id="@+id/programmeAnchor"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/newsImage"
-            android:layout_alignBottom="@+id/newsImage"
-            android:text="Morayo, Taiwo, Busayo"
+            android:layout_below="@id/programmeTitle"
+            android:layout_alignParentLeft="true"
+            android:text="Anchors Here"
             android:textSize="14sp"
             android:maxLines="2"
             android:ellipsize="end"
-            android:textColor="#d50000"/>
+            android:textColor="#d50000"
+            android:paddingLeft="10dp"/>
 
     </RelativeLayout>
 

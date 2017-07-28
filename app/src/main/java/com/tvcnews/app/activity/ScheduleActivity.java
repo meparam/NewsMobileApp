@@ -74,9 +74,33 @@ public class ScheduleActivity extends AppCompatActivity {
         });
     }
 
-    private void populateContent(){
-        for (int i = 0; i<5; i++){
+    private void populateContent() {
+        String[] titles = getResources().getStringArray(R.array.programs);
+        String[] anchor = getResources().getStringArray(R.array.anchors);
+
+        for (int i = 0; i < titles.length; i++) {
             ScheduleObject no = new ScheduleObject();
+            no.setTitle(titles[i]);
+            no.setAnchor(anchor[i]);
+            if (i == 0) {
+                no.setImage(getResources().getDrawable(R.drawable.program_1));
+            }
+            if (i == 1) {
+                no.setImage(getResources().getDrawable(R.drawable.program_2));
+            }
+            if (i == 2) {
+                no.setImage(getResources().getDrawable(R.drawable.program_3));
+            }
+            if (i == 3) {
+                no.setImage(getResources().getDrawable(R.drawable.program_4));
+            }
+            if (i == 4) {
+                no.setImage(getResources().getDrawable(R.drawable.program_5));
+            }
+            if (i == 5) {
+                no.setImage(getResources().getDrawable(R.drawable.program_6));
+            }
+            //no.setImage(getResources().getDrawable(Integer.parseInt(img[i])));
             array.add(no);
         }
     }

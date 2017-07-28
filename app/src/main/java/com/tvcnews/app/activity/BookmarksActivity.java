@@ -97,10 +97,34 @@ public class BookmarksActivity extends AppCompatActivity {
         rateCont.setOnClickListener(drawerClickManager);
     }
 
-    private void populateContent(){
-        for (int i = 0; i<5; i++){
+    private void populateContent() {
+        String[] titles = getResources().getStringArray(R.array.news_title);
+        String[] body = getResources().getStringArray(R.array.news_body);
+
+        for (int i = 0; i < titles.length; i++) {
             NewsItemsObject no = new NewsItemsObject();
+            no.setTitle(titles[i]);
+            no.setBody(body[i]);
             no.setChecked(true);
+            if (i == 0) {
+                no.setImage(getResources().getDrawable(R.drawable.article_6));
+            }
+            if (i == 1) {
+                no.setImage(getResources().getDrawable(R.drawable.article_1));
+            }
+            if (i == 2) {
+                no.setImage(getResources().getDrawable(R.drawable.article_2));
+            }
+            if (i == 3) {
+                no.setImage(getResources().getDrawable(R.drawable.article_3));
+            }
+            if (i == 4) {
+                no.setImage(getResources().getDrawable(R.drawable.article_4));
+            }
+            if (i == 5) {
+                no.setImage(getResources().getDrawable(R.drawable.article_5));
+            }
+            //no.setImage(getResources().getDrawable(Integer.parseInt(img[i])));
             array.add(no);
         }
     }
